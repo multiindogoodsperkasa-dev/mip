@@ -8,6 +8,8 @@
 	<link rel="shortcut icon" href="image/favicon.png">
 	<link rel="stylesheet" href="css/all.min.css">
 	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/swiper.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -18,56 +20,133 @@
 	<script src="js/jquery.min.js"></script>
 </head>
 <body class="bg-brands">
-	<div class="w-100 pt-5">
+	<div class="w-100 pt-3 pt-md-5">
 		<nav class="navbar navbar-expand-lg navbar-light">
 			<div class="container">
-				<a class="navbar-brand" href="">
-					<img src="./image/logo-black.png" width="150px" height="100%" alt="">
-				</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
+				<a class="navbar-brand" href="">
+					<img src="./image/logo-black.png" width="150px" height="100%" alt="">
+				</a>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-					<li class="nav-item px-3">
-						<a class="nav-link" aria-current="page" href="index.html">Home</a>
-					</li>
-					<li class="nav-item px-3">
-						<a class="nav-link active" href="brands.html">Our Brands</a>
-					</li>
-					<li class="nav-item px-3">
-						<a class="nav-link" href="contact.html">Contact</a>
-					</li>
+						<li class="nav-item px-3">
+							<a class="nav-link" aria-current="page" href="index.html">Home</a>
+						</li>
+						<li class="nav-item px-3">
+							<a class="nav-link active" href="brands.html">Our Brands</a>
+						</li>
+						<li class="nav-item px-3">
+							<a class="nav-link" href="contact.html">Contact</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</nav>
 	</div>
 	<div class="main-content">
-		<div class="section-brands">
-			<div class="row justify-content-start align-items-start align-content-start w-100 pt-5">
-				<div class="col-12 col-md-3">
-					<div class="p-5 ms-0 ms-md-5">
-						<div class="d-none d-lg-block">
+		<div class="container position-relative">
+			<div class="swiper mt-5 mySwiper d-none d-md-block">
+				<div class="swiper-wrapper pe-none">
+					<div class="swiper-slide">
+						<div class="text-start">
 							<h1 class="fw-bold">Our</h1>
 							<h1 class="fw-bold">Brands</h1>
-							<h1 class="text-danger p-0 m-0 fw-bold">Catalog</h1>
+							<h1 class="p-0 m-0 fw-bold" style="color: var(--main-color) !important;">Catalog</h1>
 						</div>
-						<div class="d-block d-lg-none text-center">
-							<h1 class="fw-bold">Our Brands <span class="text-danger p-0 m-0 fw-bold">Catalog</span></h1>
+					</div>
+					<div class="swiper-slide" >
+						<div class="mb-3 brands-box">
+							<img src="./image/products/wardah.png" alt="" srcset="">
+						</div>
+						<div class="mb-5 brands-box">
+							<img src="./image/products/makeover.png" alt="" srcset="">
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="mb-3 brands-box">
+							<img src="./image/products/emina.png" alt="" srcset="">
+						</div>
+						<div class="mb-5 brands-box">
+							<img src="./image/products/unilever.png" alt="" srcset="">
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="mb-3 brands-box">
+							<img src="./image/products/kahf.png" alt="" srcset="">
+						</div>
+						<div class="mb-5 brands-box brands-hide d-none">
+							<img src="./image/products/labore.png" alt="" srcset="">
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="mb-3 brands-box brands-hide d-none">
+							<img src="./image/products/crystallure.png" alt="" srcset="">
+						</div>
+						<div class="mb-5 brands-box brands-hide d-none">
+							<img src="./image/products/nn.png" alt="" srcset="">
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="mb-5 brands-box brands-hide d-none">
+							<img src="./image/products/paullorna.png" alt="" srcset="">
 						</div>
 					</div>
 				</div>
-				<div class="col-12 col-md-9">
-					<div class="brands-container">
-						<div class="brands mt-5 pb-5">
-							<div class="brands-box"><i class="fa-brands fa-facebook brands-icon"></i></div>
-							<div class="brands-box"><i class="fa-brands fa-usps brands-icon"></i></div>
-							<div class="brands-box"><i class="fa-brands fa-google  brands-icon"></i></div>
-							<div class="brands-box"><i class="fa-brands fa-wix  brands-icon"></i></div>
-							<div class="brands-box"><i class="fa-brands fa-twitter  brands-icon"></i></div>
-							<div class="brands-box"><i class="fa-brands fa-instagram  brands-icon"></i></div>
-							<div class="brands-box"><i class="fa-brands fa-tiktok  brands-icon"></i></div>
-							<div class="brands-box"><i class="fa-brands fa-wix  brands-icon"></i></div>
+				<div class="btn btn-primary open-button" id="btnOpenSlider" style="">
+					<i id="open" class="fa-solid fa-angle-right" style="font-size: 30px !important; padding: .3em;"></i>
+				</div>
+			</div>
+			<div class="d-block d-md-none mt-5">
+				<div class="text-start ms-3">
+					<h1 class="fw-bold">Our Brands</h1>
+					<h1 class="fw-bold"><span class="p-0 m-0 fw-bold" style="color: var(--main-color) !important;">Catalog</span></h1>
+					<div class="row mt-4 brands-box-mobile">
+						<div class="col-6 px-0">
+							<div class="mb-3">
+								<img src="./image/products/wardah.png" width="90%" alt="" srcset="">
+							</div>
+						</div>
+						<div class="col-6 px-0">
+							<div class="mb-3">
+								<img src="./image/products/makeover.png" width="90%" alt="" srcset="">
+							</div>
+						</div>
+						<div class="col-6 px-0">
+							<div class="mb-3">
+								<img src="./image/products/emina.png" width="90%" alt="" srcset="">
+							</div>
+						</div>
+						<div class="col-6 px-0">
+							<div class="mb-3">
+								<img src="./image/products/unilever.png" width="90%" alt="" srcset="">
+							</div>
+						</div>
+						<div class="col-6 px-0">
+							<div class="mb-3">
+								<img src="./image/products/kahf.png" width="90%" alt="" srcset="">
+							</div>
+						</div>
+						<div class="col-6 px-0">
+							<div class="mb-3">
+								<img src="./image/products/labore.png" width="90%" alt="" srcset="">
+							</div>
+						</div>
+						<div class="col-6 px-0">
+							<div class="mb-3">
+								<img src="./image/products/crystallure.png" width="90%" alt="" srcset="">
+							</div>
+						</div>
+						<div class="col-6 px-0">
+							<div class="mb-3">
+								<img src="./image/products/nn.png" width="90%" alt="" srcset="">
+							</div>
+						</div>
+						<div class="col-6 px-0">
+							<div class="mb-3">
+								<img src="./image/products/paullorna.png" width="90%" alt="" srcset="">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -75,6 +154,60 @@
 		</div>
 	</div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script type="text/javascript">
+	var swiper = new Swiper(".mySwiper", {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		freeMode: true,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		breakpoints: {
+			// when window width is >= 576px
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			// when window width is >= 768px
+			768	: {
+				slidesPerView: 3,
+				spaceBetween: 30
+			},
+			// when window width is >= 992px
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 0
+			},
+			// when window width is >= 1200px
+			1200: {
+				slidesPerView: 5,
+				spaceBetween: 0
+			}
+		}
+    });
+
+	$(document).ready(function () {
+		$('#btnOpenSlider').click(function (e)
+		{ 
+			if ($('.swiper-wrapper').hasClass('pe-none')) 
+			{
+				swiper.slideTo(1);
+				$('#open').removeClass(' fa-angle-right');
+				$('#open').addClass(' fa-angle-left');
+				$('.brands-hide').removeClass('d-none');
+				$('.swiper-wrapper').removeClass('pe-none');
+			}
+			else 
+			{
+				swiper.slideTo(0);
+				$('#open').removeClass(' fa-angle-left');
+				$('#open').addClass(' fa-angle-right');
+				$('.brands-hide').addClass('d-none');
+				$('.swiper-wrapper').addClass('pe-none');
+			}
+		});
+	});
 </script>
 </html>

@@ -40,7 +40,6 @@
 
 .bg-brands
 {
-	background-color: white;
 	background-image: url('../image/shape2.png');
 	background-position: left bottom;
 	background-repeat: no-repeat;
@@ -52,8 +51,8 @@
 {
 	background-position: center;
 	background-repeat: no-repeat;
-	background-position: 20% bottom;
-	background-size: cover;
+	background-position: right bottom;
+	background-size: contain;
 	background-attachment: fixed;
 	background-image: url('../image/shape3.png');
 }
@@ -82,12 +81,7 @@
 	font-weight: bold;
 }
 
-.bg-glass 
-{
-	background-color: rgba(255, 255, 255, 0.5) !important;
-	backdrop-filter: blur(10px);
-}
-
+/*HOME*/
 .section 
 {
 	min-height: 100vh;
@@ -114,7 +108,6 @@
 	background-attachment: scroll;
 	z-index: 100;
 }
-
 .section-home .red-box
 {
 	position: absolute;
@@ -168,7 +161,6 @@
 	font-size: 15px;
 	color: var(--shade-color) !important;
 }
-
 .btn-about-us
 {
 	position: absolute;
@@ -177,26 +169,6 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 
-}
-
-.corner-image
-{
-	position: absolute;
-	transform: rotate(45deg);
-	border-radius: 20px;
-	bottom: -120px;
-	left: -100px;
-	height: 400px;
-	width: 400px;
-	z-index: -20;
-	background-color: var(--main-color);
-}
-.corner-image:nth-child(2)
-{
-	bottom: -120px;
-	left: -40px;
-	z-index: -10;
-	background-color: var(--sub-color);
 }
 
 .vision-container 
@@ -228,90 +200,15 @@
 	color: white !important;
 	mix-blend-mode: difference;
 }
+/*HOME END*/
 
-/* BRANDS STYLE */
-.brands-container 
-{
-	width: 100%;
-	overflow-x: overlay;
-}
-.brands 
-{
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 30px;
-}
-.brands-box 
-{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-	cursor: pointer;
-	width: 10em;
-	height: 10em;
-	background-color: black;
-	border-radius: 30px 30px 0px 30px;
-	box-shadow: 10px 10px 24px -10px rgba(0,0,0,0.75);
-	-webkit-box-shadow: 10px 10px 24px -10px rgba(0,0,0,0.75);
-	-moz-box-shadow: 10px 10px 24px -10px rgba(0,0,0,0.75);
-	transition: .4s;
-}
-.brands-box .brands-icon
-{
-	font-size: 100px !important;
-	color: white;
-}
-.brands-box:hover
-{
-	box-shadow: 10px 10px 24px -3px rgba(0,0,0,0.75);
-	-webkit-box-shadow: 10px 10px 24px -3px rgba(0,0,0,0.75);
-	-moz-box-shadow: 10px 10px 24px -3px rgba(0,0,0,0.75);
-	transition: .4s;
-}
-
-.brands-box:nth-child(odd)
-{
-	background-color: rgb(0, 139, 163) !important;
-}
-.brands-box:nth-child(even)
-{
-	background-color: rgb(163, 11, 0) !important;
-}
-
-.contacts-detail
-{
-}
+/* CONTACTS */
 .contacts-detail a
 {
 	color: black;
 	text-decoration: none !important;
 }
 
-
-/* MAPS */
-
-.map-container 
-{
-	padding-top: 160px !important;
-}
-.hex-map
-{
-	position:absolute !important;
-	height: 700px !important;
-	width: 25.3em !important;
-	background-color: white !important;
-	transform: rotate(90deg);
-}
-.map-iframe
-{
-	height: 700px;
-	width: 700px;
-	position:absolute !important; 
-	clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-	transform: scale(1);
-}
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) { 
@@ -400,28 +297,6 @@
 	{
 		font-size: 20px;
 	}
-
-	.map-container 
-	{
-		padding-top: 160px !important;
-		margin-top: 200px;
-	}
-	.hex-map
-	{
-		position:absolute !important;
-		height: 450px !important;
-		width: 16.3em !important;
-		background-color: white !important;
-		transform: rotate(90deg);
-	}
-	.map-iframe
-	{
-		height: 450px;
-		width: 450px;
-		position:absolute !important; 
-		clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-		transform: scale(1);
-	}
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
@@ -430,26 +305,6 @@
 	.vision-detail
 	{
 		font-size: 22px;
-	}
-	.map-container 
-	{
-		padding-top: 160px !important;
-	}
-	.hex-map
-	{
-		position:absolute !important;
-		height: 500px !important;
-		width: 18.3em !important;
-		background-color: white !important;
-		transform: rotate(90deg);
-	}
-	.map-iframe
-	{
-		height: 500px;
-		width: 500px;
-		position:absolute !important; 
-		clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-		transform: scale(1);
 	}
 }
 
@@ -461,8 +316,133 @@
 	}
 }
 
+/* ===========================MAP CSS HERE================================= */
 
-/* SHAPE CSS */
+/* MAPS */
+.map-iframe
+{
+	text-align: center;
+	margin: 50px 0px;
+	height: 300px;
+	width: 300px;
+	clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+	transform: scale(1);
+}
+
+.map-hex
+{
+	margin-top: 46px;
+    margin-left: 60px;
+	width: 11.3em;
+	z-index: 0;
+	height: 310px;
+	border-radius: 1em/.5em;
+	background-color: white;
+	position: absolute;
+	transform: rotateZ(90deg) !important;
+}
+.map-hex:before,
+.map-hex:after {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	border-radius: inherit;
+	background: inherit;
+	z-index: -2;
+	content: '';
+}
+
+.map-hex:before {
+	-webkit-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
+
+.map-hex:after {
+	-webkit-transform: rotate(-60deg);
+	transform: rotate(-60deg);
+} 
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+	.map-iframe
+	{
+		text-align: center;
+		margin: -205px 0px 100px 210px;
+		height: 350px;
+		width: 350px;
+		clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+		transform: scale(1);
+	}
+	.map-hex
+	{
+		width: 13.3em;
+		margin: -210px 0px 0px 279px;
+		height: 360px;
+	}
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) 
+{ 
+	.map-iframe
+	{
+		text-align: center;
+		margin: -220px 0px 0px 300px;
+		height: 350px;
+		width: 350px;
+		clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+		transform: scale(1);
+	}
+	.map-hex
+	{
+		width: 13.3em;
+		margin: -224px 0px 0px 369px;
+		height: 360px;
+	}
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) 
+{ 
+	.map-iframe
+	{
+		text-align: center;
+		margin: 0px !important;
+		height: 450px;
+		width: 450px;
+		clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+		transform: scale(1);
+	}
+	.map-hex
+	{
+		width: 16.6em;
+		margin: -5px 0px 0px 93px;
+		height: 460px;
+	}
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) 
+{ 
+	.map-iframe
+	{
+		text-align: center;
+		margin: 0px !important;
+		height: 600px;
+		width: 600px;
+		clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+		transform: scale(1);
+	}
+	.map-hex
+	{
+		width: 22.3em;
+		margin: -5px 0px 0px 123px;
+		height: 610px;
+	}
+}
+/* ===========================MAP CSS HERE================================= */
+
+/* HEXAGON CSS */
 .hex-container-red 
 {
 	position: absolute;
