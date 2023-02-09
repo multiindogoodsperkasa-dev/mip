@@ -24,8 +24,8 @@
 {
     z-index: 1000 !important;
     position: absolute !important;
-    bottom:20% !important;
-    right:0 !important;
+    bottom:50% !important;
+    right: 3em !important;
     background-color: #5576b6 !important;
     border-radius: 50% !important;
 }
